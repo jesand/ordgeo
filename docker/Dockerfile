@@ -25,10 +25,10 @@ RUN pip3 install \
 	numpy
 
 # Get ordgeo source from github
-RUN git clone git@github.com:jesand/ordgeo /app/ordgeo
+RUN git clone https://github.com/jesand/ordgeo /app/ordgeo
 
 # Compile ordgeo
 WORKDIR /app/ordgeo/release
 RUN cmake -DCMAKE_BUILD_TYPE=Release ..
-RUN make soe
+RUN make
 ENV BIN=/app/ordgeo/release/src

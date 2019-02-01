@@ -22,6 +22,21 @@ cmake -DCMAKE_BUILD_TYPE=Release ..
 make
 ```
 
+## Docker
+
+If you have docker installed, you can instead build the tools in a docker image
+using the following commands.
+
+```
+cd ordgeo/docker
+docker build --tag=ordgeo .
+```
+
+You can then get an interactive shell on the docker image like so.
+```
+docker run -it ordgeo:latest bash
+```
+
 ## soe: Embed triplets with Soft Ordinal Embedding
 
 Embeds triplet comparisons using the Soft Ordinal Embedding algorithm from:

@@ -30,5 +30,5 @@ RUN git clone git@github.com:jesand/ordgeo /app/ordgeo
 # Compile ordgeo
 WORKDIR /app/ordgeo/release
 RUN cmake -DCMAKE_BUILD_TYPE=Release ..
-RUN make embed_lm embed_cmp
+RUN make soe
 ENV BIN=/app/ordgeo/release/src
